@@ -59,13 +59,13 @@ echo -e "${GREEN}  2)XPanel v3.7.6"
 echo -ne "${GREEN}\nSelect Version : ${ENDCOLOR}" ;read n
 if [ "$n" != "" ]; then
 if [ "$n" == "1" ]; then
-linkd=https://api.github.com/repos/xpanel-cp/XPanel-SSH-User-Management/releases/tags/37
+linkd=https://api.github.com/repos/alizahedi7/XPanel-SSH-User-Management/releases/tags/37
 fi
 if [ "$n" == "2" ]; then
-linkd=https://api.github.com/repos/xpanel-cp/XPanel-SSH-User-Management/releases/tags/xpanel
+linkd=https://api.github.com/repos/alizahedi7/XPanel-SSH-User-Management/releases/tags/xpanel
 fi
 else
-linkd=https://api.github.com/repos/xpanel-cp/XPanel-SSH-User-Management/releases/tags/xpanel
+linkd=https://api.github.com/repos/alizahedi7/XPanel-SSH-User-Management/releases/tags/xpanel
 fi
 
 echo -e "\nPlease input IP Server"
@@ -327,7 +327,7 @@ systemctl enable httpd
 systemctl enable stunnel4
 systemctl restart stunnel4wait
 fi
-bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/Nethogs-Json-main/master/install.sh --ipv4)
+bash <(curl -Ls https://raw.githubusercontent.com/alizahedi7/Nethogs-Json-main/master/install.sh --ipv4)
 mysql -e "create database XPanel_plus;" &
 wait
 mysql -e "CREATE USER '${adminusername}'@'localhost' IDENTIFIED BY '${adminpassword}';" &
@@ -385,7 +385,7 @@ systemctl enable stunnel4 &
 wait
 systemctl restart stunnel4 &
 wait
-curl -o /root/xpanel.sh https://raw.githubusercontent.com/xpanel-cp/XPanel-SSH-User-Management/master/cli.sh
+curl -o /root/xpanel.sh https://raw.githubusercontent.com/alizahedi7/XPanel-SSH-User-Management/master/cli.sh
 chown www-data:www-data /var/www/html/example/index.php
 clear
 
